@@ -1,0 +1,19 @@
+<svg width="200" height="210" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Maison -->
+  <polygon points="50,120 100,70 150,120" fill="#4a90e2"/>
+  <rect x="65" y="120" width="70" height="50" fill="#ffffff" stroke="#4a90e2" stroke-width="4"/>
+  <rect x="90" y="140" width="20" height="30" fill="#4a90e2"/>
+
+  <!-- Liste -->
+  <rect x="160" y="60" width="25" height="5" fill="#00000"/>
+  <rect x="160" y="75" width="25" height="5" fill="#00000"/>
+  <rect x="160" y="90" width="25" height="5" fill="#00000"/>
+  <circle cx="150" cy="62.5" r="3" fill="#4a90e2"/>
+  <circle cx="150" cy="77.5" r="3" fill="#4a90e2"/>
+  <circle cx="150" cy="92.5" r="3" fill="#4a90e2"/>
+
+  <!-- Texte -->
+  <text x="100" y="200" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00000" text-anchor="middle">
+    Liste d'immobilier
+  </text>
+</svg>
