@@ -1,0 +1,44 @@
+#thisBuilding{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#subThisBuilding .imageThisBuilding{
+    width: 920px;
+    object-fit: scale-down;
+    background-color: rgb(238, 238, 238);
+    border-radius: 38px 38px 0 0;
+}
+
+#subThisBuilding h1{
+    background-color: rgba(0, 0, 0, 0.848);
+    color: white;
+    padding: 15px 30px;
+    margin: -5px 0 30px 0;
+    border-radius: 0 0 38px 38px;
+    font-size: 35px;
+}
+
+#subThisBuilding .info{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 15px 10px;
+    font-size: 22px;
+    margin-bottom: 60px;
+}
+
+#subThisBuilding .info img{
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    vertical-align: bottom;
+}
+
+#subThisBuilding .description{
+    font-size: 20px;
+}

@@ -1,0 +1,132 @@
+#listBuilding{
+    margin-bottom: 30px;
+}
+
+#listBuilding h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+#listOfBuildings{
+    max-width: 1530px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 480px);
+    gap: 30px;
+}
+
+#filters{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 953px;
+    margin: 0 auto;
+    gap: 30px;
+    margin-bottom: 100px;
+    padding: 0 15px;
+}
+
+#filters .detailFilters{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+#filters .detailFilters input{
+    padding: 10px 8px;
+    border-radius: 38px;
+    border: 1px solid black;
+    outline: none;
+}
+
+#filters .detailFilters select{
+    border: 1px solid black;
+    border-radius: 38px;
+    padding: 10px 8px;
+    background: white;
+    min-width: 150px;
+}
+
+.searchBar{
+    width: 100%;
+    border-radius: 38px;
+    padding: 15px 8px;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+}
+
+#available{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.building{
+    background-color: rgb(215, 215, 215);
+    color: black;
+    border-radius: 38px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.building:hover{
+    transition-duration: 1s;
+    transform: scale(1.05);
+}
+
+.building > img{
+    width: 480px;
+    height: 480px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 38px 38px 0 0;
+}
+
+.building .ContentBuilding{
+    padding: 30px;
+}
+
+.building .ContentBuilding h2{
+    font-size: 30px;
+}
+
+.building .ContentBuilding p{
+    font-size: 24px;
+}
+
+.building .ContentBuilding .priceContentBuilding{
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.building .ContentBuilding .detailBuilding{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media all and (max-width: 520px){
+    #listOfBuildings{
+        grid-template-columns: repeat(auto-fill, 90%);
+    }
+
+    .building > img{
+        height: 280px;
+    }
+
+    .building .ContentBuilding .priceContentBuilding{
+        font-weight: bolder;
+        font-size: 30px;
+    }
+
+    .building .ContentBuilding h2{
+        font-size: 20px;
+    }
+
+    .building .ContentBuilding p{
+        font-size: 18px;
+    }
+}

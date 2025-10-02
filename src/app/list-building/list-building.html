@@ -1,0 +1,48 @@
+<section id="listBuilding">
+    <h1><img src="logo.svg"></h1>
+    <div id="filters">
+        <input class="searchBar" placeholder="Votre Immobillier" name="searchBuilding" #inputSearch (keyup)="filtertitle(inputSearch.value)"  type="text">
+        <div>
+            <div class="detailFilters">
+                <input type="text" placeholder="Ville" #city (keyup)="filterSearchCity(city.value)">
+                <input type="number" placeholder="Surface" #area (change)="filterSearchArea(+area.value)">
+                <input placeholder="prix minimum" type="number" #minPrice max="{{maxPrice}}" (change)="filterminPrice(+minPrice.value)" type="number">
+                <input placeholder="prix maximum" type="number" min="{{price}}" #maxPriceInput (change)="filterMaxPrice(+maxPriceInput.value)" type="number">
+                <select #priceOrder #valuePrice (change)="orderBy(priceOrder.value)">
+                    <option [defaultSelected]="" value="low">croissant</option>
+                    <option value="high">décroissant</option>
+                </select>
+            </div>
+            <div id="available">
+                <div>
+                    <label for="">disponible:</label>
+                    <input checked name="available" #inputTrueCheck (change)="filterAvailable(true)" type="radio">
+                </div>
+                <div>
+                    <label for="">Indisponible:</label>
+                    <input name="available" #inputFalseCheck (change)="filterAvailable(false)" type="radio">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="listOfBuildings">
+            @for (building of buildingList; track building.id) {
+                    <div class="building" routerLink="{{building.id}}">
+                        <img [src]='building.image' alt="">
+                        <div class="ContentBuilding">
+                            <div>
+                                <span class="priceContentBuilding">{{ building.price }} €</span>
+                                <h2>{{ building.title }}</h2>
+                                <p>{{ building.description }}</p>
+                            </div>
+                            <div class="detailBuilding">
+                                <span>{{building.location}}</span>
+                                <span>@if(building.available != false){Disponible}@else{Non disponible}</span>
+                            </div>
+                        </div>
+                    </div>
+            }
+    </div>
+</section>

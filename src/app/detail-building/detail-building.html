@@ -1,0 +1,24 @@
+@if(buildingId == undefined){
+
+} @else{
+    <section id="thisBuilding">
+        <a routerLink="/building" class="backButton">Retour</a>
+        <div id="subThisBuilding">
+            <img src="{{buildingId.image}}" class="imageThisBuilding">
+            <div class="contentThisBuilding">
+                <h1 class="title">{{ buildingId.title }}</h1>
+                <div class="info">
+                    <span class="price"><img src="price-tag-euro-svgrepo-com.svg">{{buildingId.price}} €</span>
+                    <span class="type"><img src="house-document-svgrepo-com.svg">{{buildingId.type}}</span>
+                    <span class="area"><img src="house-size-svgrepo-com.svg">{{buildingId.area}} m²</span>
+                    <span class="room"><img src="floor-plan-svgrepo-com.svg">{{buildingId.rooms}} piece</span>
+                    <span class="room"><img src="location-pin-alt-1-svgrepo-com.svg">{{buildingId.location}}</span>
+                </div>
+                
+                <p class="description">{{buildingId.description}}</p>
+                <span class="available">@if(buildingId.available != false){Disponible}@else{Non disponible}</span>
+            </div>
+        </div>
+    </section>
+}
+
