@@ -11,14 +11,7 @@ import { provideServerRendering } from '@angular/platform-server';
 export const serverConfig = {
   routes: {
     'building/:id': {
-      renderMode: 'prerender',
-      getPrerenderParams: () => {
-        return [
-          { id: '1' },
-          { id: '2' },
-          { id: '3' },
-        ];
-      }
+      renderMode: 'ssr' // ou 'client'
     }
   }
 };
