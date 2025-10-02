@@ -6,6 +6,24 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
+import { provideServerRendering } from '@angular/platform-server';
+
+export const serverConfig = {
+  routes: {
+    'building/:id': {
+      renderMode: 'prerender',
+      getPrerenderParams: () => {
+        return [
+          { id: '1' },
+          { id: '2' },
+          { id: '3' },
+        ];
+      }
+    }
+  }
+};
+
+
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
